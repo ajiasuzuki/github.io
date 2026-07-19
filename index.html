@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鈴木愛蒔亜 ｜ タガログ語通訳・翻訳</title>
+<meta name="description" content="技能実習・特定技能・育成就労のフィリピン人材と職場をつなぐ、タガログ語通訳・翻訳。監理団体様向け相談窓口運営、講習通訳、緊急対応まで。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;800&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4ED;
+    --paper-deep:#EFEADB;
+    --ink:#1B3A5C;
+    --ink-deep:#12283F;
+    --gold:#C98A2E;
+    --gold-deep:#A66F1E;
+    --teal:#14524A;
+    --text:#2B2B27;
+    --text-soft:#5B584F;
+    --line:#D8D0BF;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--text);
+    font-family:"Noto Sans JP",sans-serif;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.brand{
+    font-family:"Shippori Mincho",serif;
+    color:var(--ink);
+    margin:0;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    font-size:12.5px;
+    letter-spacing:0.28em;
+    color:var(--gold-deep);
+    font-weight:600;
+    text-transform:uppercase;
+  }
+
+  /* ---------- Nav ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(247,244,237,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav.wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    height:72px;
+  }
+  .brand{font-size:19px;font-weight:600;letter-spacing:.02em;}
+  .brand span{display:block;font-family:"Noto Sans JP",sans-serif;font-size:11px;font-weight:500;color:var(--text-soft);letter-spacing:.14em;margin-top:2px;}
+  nav .links{display:flex;align-items:center;gap:28px;font-size:14.5px;font-weight:500;}
+  nav .links a:hover{color:var(--gold-deep);}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 22px;border-radius:2px;
+    font-weight:600;font-size:14.5px;letter-spacing:.02em;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--ink);color:var(--white);}
+  .btn-primary:hover{background:var(--ink-deep);}
+  .btn-gold{background:var(--gold);color:var(--white);}
+  .btn-gold:hover{background:var(--gold-deep);}
+  nav .btn{padding:10px 18px;font-size:13.5px;}
+
+  /* ---------- Bridge divider (signature element) ---------- */
+  .bridge{width:100%;height:46px;display:block;margin:0 auto;}
+  .bridge path{fill:none;stroke:var(--gold);stroke-width:1.6;opacity:.55;}
+  .bridge circle{fill:var(--ink);}
+  .bridge .ph{fill:var(--gold-deep);}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:88px 0 60px;}
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;
+  }
+  .hero h1{
+    font-size:44px;font-weight:800;line-height:1.4;letter-spacing:.01em;
+  }
+  .hero h1 em{font-style:normal;color:var(--gold-deep);}
+  .hero p.lead{
+    margin-top:22px;font-size:16.5px;color:var(--text-soft);max-width:46ch;
+  }
+  .hero .ctas{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-art{position:relative;height:340px;}
+  .hero-art svg{width:100%;height:100%;}
+
+  /* ---------- Pain points ---------- */
+  section.pain{padding:64px 0;}
+  .pain-head{text-align:center;max-width:640px;margin:0 auto 40px;}
+  .pain-head h2{font-size:27px;font-weight:600;}
+  .pain-list{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+  }
+  .pain-item{
+    background:var(--white);border:1px solid var(--line);
+    padding:26px 24px;border-radius:2px;
+  }
+  .pain-item .q{font-size:26px;color:var(--gold);font-family:"Shippori Mincho",serif;line-height:1;margin-bottom:10px;display:block;}
+  .pain-item p{margin:0;font-size:14.5px;color:var(--text-soft);}
+
+  /* ---------- Services ---------- */
+  section.services{padding:70px 0;}
+  .section-head{max-width:640px;margin-bottom:44px;}
+  .section-head h2{font-size:30px;font-weight:600;}
+  .section-head p{color:var(--text-soft);margin-top:12px;font-size:15px;}
+  .svc-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
+    background:var(--line);border:1px solid var(--line);
+  }
+  .svc{background:var(--paper);padding:30px 26px;min-height:168px;position:relative;}
+  .svc .num{
+    font-family:"Shippori Mincho",serif;font-size:13px;color:var(--gold-deep);
+    letter-spacing:.1em;
+  }
+  .svc h3{font-size:17px;font-weight:600;margin:12px 0 8px;color:var(--ink);}
+  .svc p{margin:0;font-size:13.8px;color:var(--text-soft);}
+
+  /* ---------- Stats ---------- */
+  section.stats{background:var(--ink);color:var(--paper);padding:64px 0;}
+  .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center;}
+  .stat b{
+    display:block;font-family:"Shippori Mincho",serif;font-size:46px;font-weight:600;color:var(--gold);
+  }
+  .stat span{font-size:13.5px;color:#C9D3DE;letter-spacing:.03em;}
+
+  /* ---------- Pricing ---------- */
+  section.pricing{padding:74px 0;}
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .price-card{
+    border:1px solid var(--line);background:var(--white);padding:34px 30px;border-radius:2px;
+    position:relative;
+  }
+  .price-card.featured{border-color:var(--gold);}
+  .price-card .tag{
+    display:inline-block;font-size:11.5px;letter-spacing:.14em;color:var(--gold-deep);
+    font-weight:700;text-transform:uppercase;margin-bottom:14px;
+  }
+  .price-card h3{font-size:19px;font-weight:600;color:var(--ink);margin-bottom:8px;}
+  .price-card .amount{font-family:"Shippori Mincho",serif;font-size:32px;color:var(--ink);margin:14px 0 6px;}
+  .price-card .amount small{font-size:14px;font-family:"Noto Sans JP",sans-serif;color:var(--text-soft);}
+  .price-card ul{margin:18px 0 0;padding-left:18px;font-size:14px;color:var(--text-soft);}
+  .price-card li{margin-bottom:6px;}
+  .price-note{margin-top:22px;font-size:13.5px;color:var(--text-soft);text-align:center;}
+
+  /* ---------- Profile ---------- */
+  section.profile{padding:74px 0;}
+  .profile-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:48px;align-items:center;}
+  .profile-photo{
+    aspect-ratio:3/4;background:var(--paper-deep);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;color:var(--text-soft);font-size:13px;text-align:center;padding:20px;
+  }
+  .profile-body h2{font-size:26px;font-weight:600;margin-bottom:6px;}
+  .profile-body .role{color:var(--gold-deep);font-size:13.5px;font-weight:600;letter-spacing:.06em;margin-bottom:18px;display:block;}
+  .profile-body p{color:var(--text-soft);font-size:15px;}
+
+  /* ---------- Contact ---------- */
+  section.contact{background:var(--paper-deep);padding:80px 0;text-align:center;}
+  section.contact h2{font-size:30px;font-weight:600;}
+  section.contact p{color:var(--text-soft);margin:14px auto 30px;max-width:44ch;font-size:15.5px;}
+  .contact-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .phone-big{font-family:"Shippori Mincho",serif;font-size:30px;color:var(--ink);margin-top:26px;letter-spacing:.02em;}
+
+  footer{padding:30px 0;text-align:center;font-size:12.5px;color:var(--text-soft);}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-art{height:220px;order:-1;}
+    .hero h1{font-size:32px;}
+    .pain-list{grid-template-columns:1fr;}
+    .svc-grid{grid-template-columns:1fr;}
+    .stats-grid{grid-template-columns:1fr;gap:28px;}
+    .price-grid{grid-template-columns:1fr;}
+    .profile-grid{grid-template-columns:1fr;}
+    .profile-photo{max-width:220px;margin:0 auto;}
+    nav .links{display:none;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .bridge-anim{animation:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav class="wrap">
+    <div class="brand">鈴木 愛蒔亜<span>TAGALOG INTERPRETER &amp; TRANSLATOR</span></div>
+    <div class="links">
+      <a href="#services">サービス</a>
+      <a href="#pricing">料金</a>
+      <a href="#profile">プロフィール</a>
+      <a href="#contact" class="btn btn-primary">お問い合わせ</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Tagalog Interpreter &amp; Translator</p>
+      <h1>ことばの橋をかける、<br><em>タガログ語通訳</em>。</h1>
+      <p class="lead">技能実習・特定技能・育成就労 ― フィリピン人材と職場をつなぐ通訳・翻訳のパートナー。監理団体様の相談窓口運営から講習通訳、緊急対応まで、母国語で丁寧に支えます。</p>
+      <div class="ctas">
+        <a href="tel:08093621120" class="btn btn-gold">📞 080-9362-1120</a>
+        <a href="#services" class="btn" style="border:1px solid var(--ink);">サービス内容を見る</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 360 340" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="80" cy="80" r="34" fill="none" stroke="#1B3A5C" stroke-width="2"/>
+        <text x="80" y="88" text-anchor="middle" font-family="Shippori Mincho, serif" font-size="26" fill="#1B3A5C">日</text>
+        <circle cx="280" cy="260" r="34" fill="none" stroke="#C98A2E" stroke-width="2"/>
+        <text x="280" y="266" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-weight="700" font-size="18" fill="#C98A2E">PH</text>
+        <path d="M 104 96 C 160 140, 200 200, 256 244" fill="none" stroke="#C98A2E" stroke-width="1.6" stroke-dasharray="4 7" opacity="0.7"/>
+        <circle cx="150" cy="130" r="3" fill="#1B3A5C"/>
+        <circle cx="190" cy="175" r="3" fill="#C98A2E"/>
+        <circle cx="225" cy="212" r="3" fill="#1B3A5C"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<svg class="bridge" viewBox="0 0 1040 46" preserveAspectRatio="none"><path d="M0 30 C 260 -6, 780 66, 1040 20"/></svg>
+
+<section class="pain">
+  <div class="wrap">
+    <div class="pain-head">
+      <h2>こんなお悩み、ありませんか？</h2>
+    </div>
+    <div class="pain-list">
+      <div class="pain-item"><span class="q">?</span><p>実習生・特定技能人材の本音が、なかなか聞き取れない</p></div>
+      <div class="pain-item"><span class="q">?</span><p>講習の内容が、本当に正しく伝わっているか不安がある</p></div>
+      <div class="pain-item"><span class="q">?</span><p>トラブル発生時、すぐに動ける通訳が見つからない</p></div>
+    </div>
+  </div>
+</section>
+
+<svg class="bridge" viewBox="0 0 1040 46" preserveAspectRatio="none"><path d="M0 20 C 300 60, 700 -10, 1040 30"/></svg>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Services</p>
+      <h2>ご支援できること</h2>
+      <p>技能実習・特定技能・育成就労、いずれの制度にも対応。監理団体様・登録支援機関様の業務を、通訳・翻訳の面から支えます。</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc"><span class="num">01</span><h3>相談窓口の運営</h3><p>LINE・メッセンジャーで実習生・組合担当者をつなぐ常設の相談窓口を運用します。</p></div>
+      <div class="svc"><span class="num">02</span><h3>監査・巡回同行通訳</h3><p>母国語での面談により、本音や不調の兆候を早期に察知します。</p></div>
+      <div class="svc"><span class="num">03</span><h3>講習の逐次通訳</h3><p>法的保護講習、安全衛生・技能講習など、専門性の高い内容も対応します。</p></div>
+      <div class="svc"><span class="num">04</span><h3>書類・マニュアル翻訳</h3><p>現地で自然に伝わる表現で、規則やマニュアルをタガログ語に翻訳します。</p></div>
+      <div class="svc"><span class="num">05</span><h3>緊急時の通訳対応</h3><p>ケガや生活トラブル発生時も、対面・オンラインで柔軟に対応します。</p></div>
+      <div class="svc"><span class="num">06</span><h3>POLO関連手続き</h3><p>特定技能のPOLO面接通訳、POLOへの電話問い合わせ代行も承ります。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><b>8<small style="font-size:22px;">年+</small></b><span>技能実習・特定技能分野での実務経験</span></div>
+    <div class="stat"><b>3</b><span>言語対応（タガログ語・日本語・英語）</span></div>
+    <div class="stat"><b>28<small style="font-size:22px;">h</small></b><span>玉掛講習など長時間講習にも対応実績</span></div>
+  </div>
+</section>
+
+<svg class="bridge" viewBox="0 0 1040 46" preserveAspectRatio="none"><path d="M0 30 C 260 -6, 780 66, 1040 20"/></svg>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Pricing</p>
+      <h2>料金プラン（目安）</h2>
+      <p>人数規模や業務範囲に応じて、月額定額プランをご用意しています。単発でのご依頼も可能です。</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <span class="tag">相談窓口のみ</span>
+        <h3>ライトプラン</h3>
+        <div class="amount">¥45,000<small> 〜／月</small></div>
+        <ul>
+          <li>実習生向け相談窓口の運営</li>
+          <li>LINE・メッセンジャーでの通訳</li>
+          <li>月末の通訳レポート提出</li>
+        </ul>
+      </div>
+      <div class="price-card featured">
+        <span class="tag">おすすめ</span>
+        <h3>フルパッケージ</h3>
+        <div class="amount">¥85,000<small> 〜／月</small></div>
+        <ul>
+          <li>相談窓口＋POLO面接通訳</li>
+          <li>簡易な文章翻訳</li>
+          <li>POLOへの電話問い合わせ代行</li>
+        </ul>
+      </div>
+    </div>
+    <p class="price-note">人数規模・業務内容により変動します。詳しい料金表は、お問い合わせの際にお送りします。</p>
+  </div>
+</section>
+
+<section class="profile" id="profile">
+  <div class="wrap profile-grid">
+    <div class="profile-photo">写真スペース<br>（ご用意いただければ差し替えます）</div>
+    <div class="profile-body">
+      <p class="role">Profile</p>
+      <h2>鈴木 愛蒔亜</h2>
+      <p>母がフィリピン人であり、幼少期より日本とフィリピンを行き来して育ったため、日本語・タガログ語・英語を自然に使い分けることができます。2016年から2022年まで技能実習生受入れの協同組合にて通訳・翻訳業務に従事し、2022年の独立後も技能実習・特定技能分野を中心に活動を続けています。実習生お一人おひとりの言葉に耳を傾け、安心して制度を利用いただけるよう、現場に寄り添う通訳を心がけています。</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>まずはお気軽にご相談ください</h2>
+    <p>体制の見直しや新規のご相談など、通訳・翻訳に関することでしたらどんな内容でもお問い合わせください。</p>
+    <div class="contact-actions">
+      <a href="tel:08093621120" class="btn btn-gold">電話で相談する</a>
+    </div>
+    <div class="phone-big">080-9362-1120</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 鈴木愛蒔亜 ｜ タガログ語通訳・翻訳</div>
+</footer>
+
+</body>
+</html>
