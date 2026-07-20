@@ -141,6 +141,22 @@
   section.pricing{padding:74px 0;}
   section.other-services{padding:70px 0;}
   .price-card .other-desc{margin-top:10px;font-size:13.8px;color:var(--text-soft);}
+
+  .rate-table{
+    width:100%;max-width:640px;margin:32px auto 0;border-collapse:collapse;
+    background:var(--white);border:1px solid var(--line);
+  }
+  .rate-table th{
+    background:var(--ink);color:var(--white);font-size:13.5px;font-weight:600;
+    text-align:left;padding:12px 20px;letter-spacing:.03em;
+  }
+  .rate-table th:last-child,.rate-table td:last-child{text-align:right;}
+  .rate-table td{
+    padding:13px 20px;font-size:14.5px;color:var(--text);border-top:1px solid var(--line);
+  }
+  .rate-table td:last-child{font-weight:600;color:var(--ink);font-family:"Shippori Mincho",serif;font-size:16px;}
+  .rate-table td span{font-family:"Noto Sans JP",sans-serif;font-weight:400;font-size:12.5px;color:var(--text-soft);margin-left:4px;}
+  .rate-table tbody tr:nth-child(even){background:var(--paper);}
   .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
   .price-card{
     border:1px solid var(--line);background:var(--white);padding:34px 30px;border-radius:2px;
@@ -219,6 +235,8 @@
     .profile-grid{grid-template-columns:1fr;}
     .profile-photo{max-width:220px;margin:0 auto;}
     nav .links{display:none;}
+    .rate-table th,.rate-table td{padding:10px 12px;font-size:13px;}
+    .rate-table td:last-child{font-size:14.5px;}
   }
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
@@ -296,7 +314,7 @@
       <div class="svc"><span class="num">03</span><h3>講習の逐次通訳</h3><p>法的保護講習、安全衛生・技能講習など、専門性の高い内容も対応します。</p></div>
       <div class="svc"><span class="num">04</span><h3>書類・マニュアル翻訳</h3><p>現地で自然に伝わる表現で、規則やマニュアルをタガログ語に翻訳します。</p></div>
       <div class="svc"><span class="num">05</span><h3>緊急時の通訳対応</h3><p>ケガや生活トラブル発生時も、対面・オンラインで柔軟に対応します。</p></div>
-      <div class="svc"><span class="num">06</span><h3>MWO関連手続き</h3><p>特定技能のMWO面接通訳、MWOへの電話問い合わせ代行も承ります。</p></div>
+      <div class="svc"><span class="num">06</span><h3>POLO関連手続き</h3><p>特定技能のPOLO面接通訳、POLOへの電話問い合わせ代行も承ります。</p></div>
     </div>
   </div>
 </section>
@@ -322,7 +340,7 @@
       <div class="price-card">
         <span class="tag">相談窓口のみ</span>
         <h3>ライトプラン</h3>
-        <div class="amount">¥45,000<small> 〜／月</small></div>
+        <div class="amount">¥45,000<small> 〜／月（税別）</small></div>
         <ul>
           <li>実習生向け相談窓口の運営</li>
           <li>LINE・メッセンジャーでの通訳</li>
@@ -332,11 +350,11 @@
       <div class="price-card featured">
         <span class="tag">おすすめ</span>
         <h3>フルパッケージ</h3>
-        <div class="amount">¥85,000<small> 〜／月</small></div>
+        <div class="amount">¥85,000<small> 〜／月（税別）</small></div>
         <ul>
           <li>タガログ語での相談窓口</li>
-          <li>MWO申請時の文章翻訳や、その他書類翻訳</li>
-          <li>MWOへの電話問い合わせ代行</li>
+          <li>POLO申請時の文章翻訳や、その他書類翻訳</li>
+          <li>POLOへの電話問い合わせ代行</li>
         </ul>
       </div>
     </div>
@@ -351,7 +369,7 @@
     <div class="section-head">
       <p class="eyebrow">Other Services</p>
       <h2>実習生関連以外のご依頼も承ります</h2>
-      <p>保険調査の聞き取りや、病院への同行通訳など、技能実習・特定技能分野以外の個人・企業のお客様からのご依頼にも対応しております。</p>
+      <p>保険調査の聞き取りや病院への同行通訳、書類翻訳、ZOOM通訳など、技能実習・特定技能分野以外の個人・企業のお客様からのご依頼にも対応しております。</p>
     </div>
     <div class="price-grid">
       <div class="price-card">
@@ -364,18 +382,32 @@
         <h3>病院への同行通訳</h3>
         <p class="other-desc">通院・入院時の診察や手続きに同行し、医師とのやり取りを通訳いたします。</p>
       </div>
-    </div>
-    <div class="price-grid" style="margin-top:22px;">
       <div class="price-card">
-        <span class="tag">拘束4時間</span>
-        <div class="amount">¥20,000<small>＋消費税</small></div>
+        <span class="tag">個人・企業のお客様</span>
+        <h3>書類翻訳</h3>
+        <p class="other-desc">証明書関係の書類を含め、各種書類をタガログ語⇔日本語で翻訳いたします。</p>
       </div>
       <div class="price-card">
-        <span class="tag">拘束8時間</span>
-        <div class="amount">¥28,000<small>＋消費税</small></div>
+        <span class="tag">個人・企業のお客様</span>
+        <h3>ZOOM通訳</h3>
+        <p class="other-desc">オンライン会議・面談などに、ZOOMで通訳としてご参加いたします。</p>
       </div>
     </div>
-    <p class="price-note">上記は目安の料金です。訪問先や内容により変動する場合がございますので、お気軽にご相談ください。</p>
+
+    <table class="rate-table">
+      <thead>
+        <tr><th>内容</th><th>料金</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>対面通訳（拘束4時間）</td><td>¥22,000<span>（税込）</span></td></tr>
+        <tr><td>対面通訳（拘束8時間）</td><td>¥30,800<span>（税込）</span></td></tr>
+        <tr><td>書類翻訳（A4 1ページ）</td><td>¥4,400<span>（税込）</span></td></tr>
+        <tr><td>証明書関係の書類（A4 1ページ）</td><td>¥4,400<span>（税込）</span></td></tr>
+        <tr><td>ZOOM通訳（2時間）</td><td>¥7,700<span>（税込）</span></td></tr>
+        <tr><td>ZOOM通訳（4時間）</td><td>¥13,200<span>（税込）</span></td></tr>
+      </tbody>
+    </table>
+    <p class="price-note">上記は目安の料金です。訪問先や内容により変動する場合がございますので、お気軽にご相談ください。<br>※対面通訳は、移動時間の往復のうち復路分を拘束時間に含みます。</p>
   </div>
 </section>
 
