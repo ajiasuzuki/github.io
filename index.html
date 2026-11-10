@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -209,6 +211,18 @@
   .price-note{margin-top:22px;font-size:13.5px;color:var(--text-soft);text-align:center;}
 
   /* ---------- Profile ---------- */
+  /* ---------- Latest news (活動報告) ---------- */
+  section.news{padding:70px 0;}
+  .news-list{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink);max-width:720px;}
+  .news-list li{padding:20px 0;border-bottom:1px solid var(--line);}
+  .news-list time{display:block;font-size:13px;color:var(--gold-deep);font-weight:600;letter-spacing:.06em;}
+  .news-list h3{font-size:19px;font-weight:600;line-height:1.6;margin-top:2px;text-wrap:balance;word-break:auto-phrase;}
+  .news-list h3 a:hover{color:var(--gold-deep);}
+  .news-list p{margin:6px 0 0;font-size:14.5px;color:var(--text-soft);}
+  .news-more{margin-top:24px;font-size:14.5px;font-weight:600;}
+  .news-more a{text-decoration:underline;text-underline-offset:3px;}
+  .news-more a:hover{color:var(--gold-deep);}
+
   section.profile{padding:74px 0;}
 
   .profile-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:48px;align-items:center;}
@@ -445,6 +459,28 @@
     <p class="price-note">上記は目安の料金です。訪問先や内容により変動する場合がございますので、お気軽にご相談ください。<br>※対面通訳は、移動時間の往復のうち復路分を拘束時間に含みます。</p>
   </div>
 </section>
+
+{% if site.posts.size > 0 %}
+<section class="news" id="news">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">News</p>
+      <h2>活動報告</h2>
+      <p>技能実習・特定技能・育成就労の現場での、通訳・翻訳の取り組みをお伝えします。</p>
+    </div>
+    <ul class="news-list">
+      {% for post in site.posts limit:3 %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%-m月%-d日" }}</time>
+        <h3><a href="{{ post.url }}">{{ post.title | escape }}</a></h3>
+        {% if post.description %}<p>{{ post.description | escape }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="news-more"><a href="/news/">活動報告の一覧を見る</a></p>
+  </div>
+</section>
+{% endif %}
 
 <section class="profile" id="profile">
   <div class="wrap profile-grid">
