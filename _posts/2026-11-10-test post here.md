@@ -1,4 +1,4 @@
-```markdown
+
 ---
 layout: post
 title: "テスト投稿です！"
@@ -17,4 +17,3 @@ description: "テスト投稿1号。"
 - 箇条書き
 
 [リンクの文字](https://example.com/)
-```
