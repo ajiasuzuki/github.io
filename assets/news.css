@@ -1,0 +1,97 @@
+:root{
+  --paper:#F7F4ED;
+  --paper-deep:#EFEADB;
+  --ink:#1B3A5C;
+  --ink-deep:#12283F;
+  --gold:#C98A2E;
+  --gold-deep:#A66F1E;
+  --text:#2B2B27;
+  --text-soft:#5B584F;
+  --line:#D8D0BF;
+  --white:#FFFFFF;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--text);
+  font-family:"Noto Sans JP",sans-serif;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.brand{font-family:"Shippori Mincho",serif;color:var(--ink);margin:0;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+.narrow{max-width:720px;margin:0 auto;padding:0 24px;}
+
+/* header (トップページと同じ見た目) */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,244,237,0.92);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+header.site nav{display:flex;align-items:center;justify-content:space-between;height:72px;}
+.brand{display:flex;flex-direction:column;align-items:flex-start;}
+.brand .logo-img{height:42px;width:auto;display:block;}
+header.site .links{display:flex;align-items:center;gap:28px;font-size:14.5px;font-weight:500;}
+header.site .links a:hover{color:var(--gold-deep);}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 18px;border-radius:2px;
+  font-weight:600;font-size:14px;letter-spacing:.02em;white-space:nowrap;
+}
+.btn-primary{background:var(--ink);color:var(--white);}
+.btn-primary:hover{background:var(--ink-deep);}
+.btn-gold{background:var(--gold);color:var(--white);}
+.btn-gold:hover{background:var(--gold-deep);}
+a:focus-visible{outline:3px solid var(--ink);outline-offset:3px;}
+
+/* ページ共通 */
+main{padding:56px 0 96px;}
+.crumb{font-size:13px;color:var(--text-soft);margin-bottom:24px;}
+.crumb a{text-decoration:underline;text-underline-offset:3px;}
+.page-title{font-size:32px;font-weight:800;line-height:1.5;}
+.lead{margin:12px 0 0;color:var(--text-soft);}
+
+/* 記事一覧 */
+.post-list{list-style:none;margin:40px 0 0;padding:0;border-top:2px solid var(--ink);}
+.post-list li{padding:24px 0;border-bottom:1px solid var(--line);}
+.post-date{display:block;font-size:13px;color:var(--gold-deep);font-weight:600;letter-spacing:.06em;}
+.post-list h2{font-size:21px;font-weight:600;line-height:1.6;margin-top:2px;}
+.post-list h2 a:hover{color:var(--gold-deep);}
+.post-list p{margin:6px 0 0;font-size:15px;color:var(--text-soft);}
+.empty{margin-top:40px;padding:32px;background:var(--paper-deep);color:var(--text-soft);}
+
+/* 記事本文 */
+.post-head h1{font-size:30px;font-weight:800;line-height:1.55;margin-top:4px;}
+.post-body{margin-top:36px;font-size:16.5px;}
+.post-body h2{font-size:23px;font-weight:600;margin:48px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line);}
+.post-body h3{font-size:19px;font-weight:600;margin:32px 0 8px;}
+.post-body p{margin:0 0 1.2em;}
+.post-body ul,.post-body ol{margin:0 0 1.2em;padding-left:1.4em;}
+.post-body a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;}
+.post-body img{margin:24px auto;height:auto;}
+.post-body blockquote{margin:1.5em 0;padding:4px 20px;border-left:3px solid var(--gold);color:var(--text-soft);}
+.post-body table{width:100%;border-collapse:collapse;margin:1.5em 0;font-size:15px;}
+.post-body th,.post-body td{padding:10px 14px;border:1px solid var(--line);text-align:left;}
+.post-body th{background:var(--paper-deep);}
+
+.cta{margin-top:64px;padding:32px;background:var(--ink);color:var(--white);}
+.cta h2{color:var(--white);font-size:21px;font-weight:600;text-wrap:balance;word-break:auto-phrase;}
+.cta p{margin:8px 0 20px;color:#DCE4F2;font-size:15px;}
+.back{margin-top:40px;font-size:14.5px;}
+.back a{text-decoration:underline;text-underline-offset:3px;}
+
+footer{padding:28px 0;text-align:center;font-size:13px;color:var(--text-soft);border-top:1px solid var(--line);}
+
+@media (max-width:720px){
+  .wrap,.narrow{padding:0 20px;}
+  header.site .links a:not(.btn){display:none;}
+  main{padding:40px 0 72px;}
+  .page-title{font-size:26px;}
+  .post-head h1{font-size:24px;}
+  .cta{padding:24px;}
+}

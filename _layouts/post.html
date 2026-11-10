@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<article class="narrow">
+  <p class="crumb"><a href="/">トップ</a> ／ <a href="/news/">活動報告</a></p>
+
+  <header class="post-head">
+    <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%-m月%-d日" }}</time>
+    <h1>{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  <aside class="cta">
+    <h2>タガログ語の通訳・翻訳のご相談</h2>
+    <p>技能実習・特定技能・育成就労の現場から、病院同行、書類翻訳、ZOOM通訳まで対応しています。</p>
+    <a class="btn btn-gold" href="https://ajiasuzuki.com/#contact">お問い合わせはこちら</a>
+  </aside>
+
+  <p class="back"><a href="/news/">活動報告の一覧へ戻る</a></p>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: site.description | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+  "inLanguage": "ja",
+  "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": "鈴木 愛蒔亜",
+    "url": "https://ajiasuzuki.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "アジアタガログ語通訳",
+    "url": "https://ajiasuzuki.com/"
+  }
+}
+</script>

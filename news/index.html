@@ -1,0 +1,23 @@
+---
+layout: default
+description: アジアタガログ語通訳の活動報告。技能実習・特定技能・育成就労の現場での通訳・翻訳の実例や、日々の取り組みをお伝えします。
+---
+<div class="narrow">
+  <p class="crumb"><a href="/">トップ</a> ／ 活動報告</p>
+  <h1 class="page-title">活動報告</h1>
+  <p class="lead">技能実習・特定技能・育成就労の現場での通訳・翻訳の実例や、日々の取り組みをお伝えします。</p>
+
+  {% if site.posts.size > 0 %}
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%-m月%-d日" }}</time>
+      <h2><a href="{{ post.url }}">{{ post.title | escape }}</a></h2>
+      {% if post.description %}<p>{{ post.description | escape }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="empty">記事は準備中です。</p>
+  {% endif %}
+</div>

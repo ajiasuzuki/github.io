@@ -1,0 +1,14 @@
+title: アジアタガログ語通訳
+description: 技能実習・特定技能・育成就労のフィリピン人材と職場をつなぐ、タガログ語通訳・翻訳。
+url: https://ajiasuzuki.com
+lang: ja
+timezone: Asia/Tokyo
+
+# 記事の公開先URL: /news/ファイル名の英数字部分/
+# 例: _posts/2026-11-10-hospital-visit.md → https://ajiasuzuki.com/news/hospital-visit/
+permalink: /news/:title/
+
+# 公開しないファイル・フォルダ
+exclude:
+  - README.md
+  - _templates

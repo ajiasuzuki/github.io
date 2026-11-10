@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-889VJTYBTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-889VJTYBTS');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{%- assign page_desc = page.description | default: site.description %}
+<title>{% if page.title %}{{ page.title | escape }} ｜ {% endif %}活動報告 ｜ アジアタガログ語通訳</title>
+<meta name="description" content="{{ page_desc | strip_newlines | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+{%- if page.url == '/news/' and site.posts.size == 0 %}
+<meta name="robots" content="noindex">
+{%- endif %}
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}活動報告｜アジアタガログ語通訳{% endif %}">
+<meta property="og:description" content="{{ page_desc | strip_newlines | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;800&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/news.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="wrap">
+    <a class="brand" href="/" aria-label="アジアタガログ語通訳 トップページ"><img src="/assets/logo.png" alt="アジアタガログ語通訳" class="logo-img" width="222" height="42"></a>
+    <div class="links">
+      <a href="https://ajiasuzuki.com/#services">サービス</a>
+      <a href="https://ajiasuzuki.com/#pricing">料金</a>
+      <a href="https://ajiasuzuki.com/#profile">プロフィール</a>
+      <a href="/news/">活動報告</a>
+      <a href="https://ajiasuzuki.com/#contact" class="btn btn-primary">お問い合わせ</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+{{ content }}
+</main>
+
+<footer>
+  <div class="wrap">© アジアタガログ語通訳 ｜ タガログ語通訳・翻訳</div>
+</footer>
+
+</body>
+</html>
